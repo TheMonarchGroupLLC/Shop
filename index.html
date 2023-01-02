@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monarch</title>
+</head>
+<body>
+  <style>
+    :root {
+      --monarch-orange: #FE8D03;
+      --monarch-yellow: #FEAF01;
+      --monarch-white: #FEF5F3;
+      --monarch-brown: #382A27;
+      --monarch-black: #0D0D0D;
+    }
+
+    html {
+      font-size: 16px;
+      width: 100%;
+      height: 100%;
+    } 
+
+    @media screen and (max-width: 1200px) {
+       html {
+        font-size: 14px;
+       }
+    }
+
+    @media screen and (max-width: 1000px) {
+       html {
+        font-size: 12px;
+       }
+    }
+
+    @media screen and (max-width: 800px) {
+       html {
+        font-size: 8px;
+       }
+    }
+
+    
+    @media screen and (max-width: 600px) {
+       html {
+        font-size: 8px;
+       }
+    }
+
+    @media screen and (max-width: 400px) {
+       html {
+        font-size: 6px;
+       }
+    }
+
+    body {
+      width: inherit;
+      height: inherit;
+      background: rgba(220,220,220,1);
+    }
+
+    main {
+      display: flex;
+      flex-direction: col;
+      width: inherit;
+      height: inherit;
+      background: rgba(245,245,245,1);
+    } 
+
+    @keyframes flip {
+      0%,80% {
+        transform: rotateY(360deg) 
+      }
+    }
+
+    .shop-container {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      background: rgba(245,245,245,1);
+    }
+  
+    .shop-image {
+      display: inline-flex;
+      position: relative;
+      width: 80%;
+      padding: 0.25rem;
+      padding-right: 0.5rem;
+      left: 5%;
+      right: auto;
+    }
+
+    .shop-message {
+      display: inline-flex;
+      justify-content: center;
+      position: relative;
+      width: fit-content;
+      height: fit-content;
+      padding: 0.5rem;
+      left: 2.5%;
+    }
+
+    .shop-message span {
+      position: relative;
+      display: inline-block;
+      font-size: 2rem;
+      font-weight: 1000;
+      color: var(--monarch-brown);
+      text-transform: uppercase;
+      animation: flip 2s infinite;
+      animation-delay: calc(.2s * var(--i))
+    }
+
+    .social-media {
+      z-index: 1;
+      align-self: center;
+      margin-left: 0.5rem;
+    }
+
+    .instagram {
+      height: 2.5rem;
+      width: 2.5rem;
+      animation: flip 2s infinite;
+      animation-delay: calc(.2s * var(--i))
+    }
+  </style>
+    <main>
+      <figure class="shop-container">
+        <figcaption class="shop-message">
+          <span style="--i:1">M</span>
+          <span style="--i:2">O</span>
+          <span style="--i:3">N</span>
+          <span style="--i:4">A</span>
+          <span style="--i:5">R</span>
+          <span style="--i:6">C</span>
+          <span style="--i:7">H</span>
+          <a class="social-media" href="https://www.instagram.com/socialbutterfly.monarch/">
+            <img class="instagram" style="--i:8" alt="Instagram" src="https://static.cdninstagram.com/rsrc.php/v3/yt/r/30PrGfR3xhB.png">
+          </a>    
+        </figcaption>
+        <img class="shop-image" alt="monarch" src="/static/images/shop.jpg">
+      <figure>
+    </main>
+</body>
+</html>
